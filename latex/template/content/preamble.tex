@@ -1,0 +1,25 @@
+%!TEX root = ../document.tex
+
+% == Document class ====================================================
+
+% TODO: Change this to your preferred document class
+\documentclass[a4paper,12pt]{report}
+
+
+% == Packages ==========================================================
+
+% TODO: Insert any other packages you want to use here.
+\usepackage{files/libraries/vubtitlepage}
+
+
+% == Settings ==========================================================
+
+% Allows usage of the "dedicated" environment: a type of environment that
+% writes text on a dedicated page, with a title.
+\input{files/libraries/dedicated}
+
+% 
+%\AtBeginDocument{%
+%  \renewcommand \thelstlisting
+%       {\ifnum \c@chapter>\z@ \thechapter-\fi \@arabic\c@lstlisting}%
+%}
