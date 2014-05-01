@@ -42,8 +42,7 @@
     identifierstyle=\itseries,
     commentstyle=\color{gray75},
     keywordstyle=\bfseries,
-    showstringspaces=false
-}
+    showstringspaces=false}
 
 \newcounter{thesnippet}
 
@@ -59,8 +58,7 @@
 	margin/.estore in = \snippetMargin,
 	language/.estore in = \snippetLanguage,
 	caption/.estore in = \snippetCaption,
-	label/.estore in = \snippetLabel,
-}
+	label/.estore in = \snippetLabel,}
 
 \newcommand\snippet[2][]{%
 	\pgfkeys{/snippet, default, #1}
@@ -69,5 +67,4 @@
 		xleftmargin=\snippetMargin, xrightmargin=\snippetMargin,%
 		language=\snippetLanguage, caption=\snippetCaption,%
 		label=\snippetLabel, title={Snippet \thesection.\arabic{thesnippet}: \snippetCaption}]%
-		{#2}
-}
+		{#2}}

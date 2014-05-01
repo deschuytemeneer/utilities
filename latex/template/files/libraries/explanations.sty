@@ -1,5 +1,5 @@
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-% * Latex Templates                                 [dedicated.sty] *
+% * Latex Templates                              [explanations.sty] *
 % * Copyright (c) 2013, 2014 Kenny Deschuyteneer                    *
 % * Authors: Kenny Deschuyteneer                                    *
 % *                                                                 *
@@ -25,13 +25,20 @@
 % * OTHER DEALINGS IN THE SOFTWARE.                                 *
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
+% == Packages ==========================================================
+
+\usepackage{calc}
+\usepackage{xparse}
+
+
 % ======================================================================
 
-\newenvironment{dedicated}[1][Title]
-	{\pagebreak
-	 {\Huge\bfseries{\fontfamily{qcs}\selectfont #1}}\\
-		\begin{center}
-			\begin{minipage}{0.91\textwidth}
-				\indent \indent}
-	{\par\noindent\end{minipage}\end{center}
-	 \pagebreak}
+\newlength{\explskip}
+\newlength{\explpadding}
+
+\setlength{\explskip}{0.2\textwidth}
+
+\NewDocumentCommand{\explanation}{o m}{
+    \setlength{\explpadding}{\explskip - \widthof{#1}}
+    \noindent
+    \textbf{#1}\hspace{\explpadding} #2}
