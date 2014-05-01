@@ -9,17 +9,20 @@
 % == Packages ==========================================================
 
 % TODO: Insert any other packages you want to use here.
+
+% A custom title page, VUB style.
 \usepackage{files/libraries/vubtitlepage}
+
+% A snippet command. For full documentation, check out the .sty file.
+\usepackage{files/libraries/snippet}
+
+% Allows usage of the "dedicated" environment: a type of environment that
+% writes text on a dedicated page, with a title. For full documentation,
+% check out the .sty file.
+\usepackage{files/libraries/dedicated}
 
 
 % == Settings ==========================================================
 
-% Allows usage of the "dedicated" environment: a type of environment that
-% writes text on a dedicated page, with a title.
-\input{files/libraries/dedicated}
-
-% 
-%\AtBeginDocument{%
-%  \renewcommand \thelstlisting
-%       {\ifnum \c@chapter>\z@ \thechapter-\fi \@arabic\c@lstlisting}%
-%}
+% TODO: Add any more preamble stuff, like new commands and color definitions,
+% here.
